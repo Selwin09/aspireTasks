@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+</head>
+<body>
+<nav>
+  <div class="container">
+    <a href="#">Home</a>
+    <a href="about.html">About</a>
+    <a href="login.html" class="bigger">Log In</a>
+    <a href="#" class="highlight bigger">Sign Up</a>
+  </div>
+</nav>  
+<section class="hero">
+  <div class="container">
+
+    <div class="home-container">
+      <a>
+        <img src="bookstore2.jpg" alt="bookstore2" width="300" height="250">
+      </a>
+    </div>
+    
+    <h1>Welcome to Online BookStore App</h1>
+    <p>Discover Your Favourite Comics with us in just a few clicks!</p>
+  </div>
+  
+  <div class="book-stall">
+    <div class="container">
+      <h2>Explore Our Book Stall</h2>
+      <p>Visit our book stall and explore a vast collection of books. Find your favorite authors and discover new releases. Our book stall is a paradise for book lovers.</p>
+      <div class="book-list">
+        <div class="book-item" onclick="showBookDetails('Book 1', '222.jpg', 'Book Title 1', 'Description of Book 1', '339')">
+          <img src="222.jpg" alt="222" width="150" height="200">
+          <p>Rumi's Little Book of Life<br>339</p>
+          <button class="buy-button" onclick="buyNow()">Buy Now</button>
+        </div>
+        <div class="book-item" onclick="showBookDetails('Book 2', '111.jpg', 'Book Title 2', 'Description of Book 2', '359')">
+          <img src="111.jpg" alt="111" width="150" height="200">
+          <p>The Power of Your Subonscious Mind<br>359</p>
+          <button class="buy-button" onclick="buyNow()">Buy Now</button>
+        </div>
+        <div class="book-item" onclick="showBookDetails('Book 3', '333.jpg', 'Book Title 2', 'Description of Book 3', '399')">
+          <img src="333.jpg" alt="333" width="150" height="200">
+          <p>The complete Novel of Sherlock Holmes<br>399</p>
+          <button class="buy-button" onclick="buyNow()">Buy Now</button>
+        </div>
+        <div class="book-item" onclick="showBookDetails('Book 4', '444.jpg', 'Book Title 2', 'Description of Book 4', '299')">
+          <img src="444.jpg" alt="444" width="150" height="200">
+          <p>Think and grow rich<br>299</p>
+          <button class="buy-button" onclick="buyNow()">Buy Now</button>
+        </div>
+        <div class="book-item" onclick="showBookDetails('Book 5', '555.jpg', 'Book Title 2', 'Description of Book 5', '399')">
+          <img src="555.jpg" alt="555" width="150" height="200">
+          <p>Tula Journey : The Pursuit of Balance<br>399</p>
+          <button class="buy-button" onclick="buyNow()">Buy Now</button>
+        </div>
+        <div class="book-item" onclick="showBookDetails('Book 6', '666.jpg', 'Book Title 2', 'Description of Book 6', '499')">
+          <img src="666.jpg" alt="666" width="150" height="200">
+          <p>Don't Believe Everything You Think <br>499</p>
+          <button class="buy-button" onclick="buyNow()">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  function buyNow() {
+    var isLoggedIn = checkLoginStatus();
+
+    if (isLoggedIn) {
+      window.location.href = 'checkout.html';
+    } else {
+      var shouldLogin = confirm('You need to login to buy books. Do you want to login now?');
+
+      if (shouldLogin) {
+        window.location.href = 'login.html';
+      }
+    }
+  }
+
+  function checkLoginStatus() {
+    
+    var isLoggedIn = true; 
+    return isLoggedIn;
+  }
+</script>
+
+
+  <div class="scrollable-section">
+    <div class="content">
+      <h2>Customer Support</h2>
+      <p class="colorful-text">A dedicated 24x7 customer support team always at your service to help solve any problem</p>
+      <h3><b>COMFORT</b></h3>
+      <p class="gradient-text">
+        <li>
+          Trusted website to buy your books.
+        </li>
+        <li>
+          Included PDFs, eBooks and So on.
+        </li>
+      </p>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="container">
+    <div class="footer-section">
+      <h2>Contact Us</h2>
+      <p>Email: info@bookstore.com</p>
+      <p>Phone: 456-7890</p>
+    </div>
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <ul class="footer-links">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Log In</a></li>
+        <li><a href="#">Sign Up</a></li>
+      </ul>
+    </div>
+  </div>
+  <p>&copy; 2023 Your Online Bookstore</p>
+</footer>
+</body>
+</html>
+
+
